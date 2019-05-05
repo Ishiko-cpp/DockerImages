@@ -8,8 +8,12 @@ The images are available from [Docker Hub](https://hub.docker.com/u/ishikocpp).
 ## Images
 
 - [gcc-boost](https://github.com/Ishiko-Cpp/DockerImages/tree/master/gcc-boost):
-  a series of images based on [the official GCC Docker image](https://hub.docker.com/_/gcc)
-  and with the [Boost](https://www.boost.org/) libraries pre-installed.
+  images based on [the official GCC Docker image](https://hub.docker.com/_/gcc)
+  with the [Boost](https://www.boost.org/) libraries pre-installed.
+
+- [gcc-ishiko](https://github.com/Ishiko-Cpp/DockerImages/tree/master/gcc-ishiko):
+  images based on [the official GCC Docker image](https://hub.docker.com/_/gcc)
+  with the Ishiko/C++ framework pre-installed.
 
 ## License
 
