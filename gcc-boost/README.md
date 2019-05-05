@@ -8,7 +8,7 @@ The images are available from [Docker Hub](https://hub.docker.com/r/ishikocpp/gc
 # Image Contents
 
 The images are based on the [the official GCC Docker image](https://hub.docker.com/_/gcc) with the addition of 
-the Boost libraries that are installed in /usr/local/include and /usr/local/lib.
+the Boost libraries, which are installed in /usr/local/include and /usr/local/lib.
 
 The image uses a [multi-stage build](https://docs.docker.com/develop/develop-images/multistage-build/) to remove
 the files generated during the Boost build process from the final image.
