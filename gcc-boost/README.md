@@ -14,10 +14,11 @@ The image uses a [multi-stage build](https://docs.docker.com/develop/develop-ima
 the files generated during the Boost build process from the final image.
 
 The first stage is based on the GCC Docker image. The Boost source code is downloaded from the Boost website and
-then built using the Boost build scripts.
+then built using the Boost build scripts. The python-dev package is also installed as it is required to build
+Boost.Python.
 
 The second stage is also based on the GCC Docker image but in this stage we simply copy the Boost libraries from
-the first stage to the /usr/local/include and /usr/local/lib in the final image.
+the first stage to the /usr/local/include and /usr/local/lib directories of the final image.
 
 
 # Tags
