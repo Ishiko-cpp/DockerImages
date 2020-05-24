@@ -19,7 +19,7 @@ The images are available from [Docker Hub](https://hub.docker.com/u/ishikocpp).
 **The license below is the license for the configuration files in this repository.
 The images themselves and their content have their own licenses.**
 
-Copyright (c) 2019 Xavier Leclercq
+Copyright (c) 2019-2020 Xavier Leclercq
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),

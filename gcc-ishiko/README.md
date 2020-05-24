@@ -11,3 +11,14 @@ The images are available from [Docker Hub](https://hub.docker.com/r/ishikocpp/gc
 The images are based on the [the official GCC Docker image](https://hub.docker.com/_/gcc) with the addition of
 - the Boost libraries, which are installed in /usr/local/include and /usr/local/lib, and
 - the Ishiko/C++ framework.
+
+# Upload Instructions
+
+```
+docker build .
+docker tag <id> ishikocpp/gcc-ishiko:latest
+docker tag <id> ishikocpp/gcc-ishiko:<version>
+docker login
+docker push ishikocpp/gcc-ishiko:latest
+docker push ishikocpp/gcc-ishiko:<version>
+```
