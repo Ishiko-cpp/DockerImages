@@ -1,8 +1,8 @@
 FROM ishikocpp/gcc-boost:latest
 
-WORKDIR Ishiko-Cpp
+WORKDIR Ishiko-cpp
 
-ENV ISHIKO_CPP=/Ishiko-Cpp
+ENV ISHIKO_CPP=/Ishiko-cpp
 
 RUN git clone https://github.com/Ishiko-Cpp/Errors.git
 RUN cd Errors/Makefiles/GNUmakefile && make
@@ -18,3 +18,5 @@ RUN cd Collections/Makefiles/GNUmakefile && make
 
 RUN git clone https://github.com/Ishiko-Cpp/FileSystem.git
 RUN cd FileSystem/Makefiles/GNUmakefile && make
+
+WORKDIR /
