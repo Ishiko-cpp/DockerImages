@@ -2,7 +2,10 @@ FROM ishikocpp/gcc-boost:latest
 
 WORKDIR Ishiko-cpp
 
+ENV PUGIXML=/Ishiko-cpp/pugixml
 ENV ISHIKO_CPP=/Ishiko-cpp
+
+RUN git clone https://github.com/Ishiko-cpp/pugixml.git
 
 RUN git clone https://github.com/Ishiko-Cpp/Errors.git
 RUN cd Errors/Makefiles/GNUmakefile && make
