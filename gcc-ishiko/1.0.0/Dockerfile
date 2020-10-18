@@ -28,4 +28,7 @@ RUN cd FileSystem/Makefiles/GNUmakefile && make
 RUN git clone https://github.com/Ishiko-Cpp/Terminal.git
 RUN cd Terminal/Makefiles/GNUmakefile && make
 
+RUN git clone https://github.com/Ishiko-Cpp/Tasks.git
+RUN cd Tasks/Makefiles/GNUmakefile && make
+
 WORKDIR /
