@@ -11,6 +11,7 @@ RUN cd botan && python3 configure.py && make && make check && make install
 RUN git clone https://github.com/Ishiko-cpp/pugixml.git
 
 RUN git clone https://github.com/Ishiko-Cpp/Platform.git
+RUN cd Platform/Makefiles/GNUmakefile && make
 
 RUN git clone https://github.com/Ishiko-Cpp/Errors.git
 RUN cd Errors/Makefiles/GNUmakefile && make
