@@ -5,13 +5,21 @@ WORKDIR Ishiko-cpp
 ENV PUGIXML=/Ishiko-cpp/pugixml
 ENV ISHIKO_CPP=/Ishiko-cpp
 
+RUN git clone https://github.com/Ishiko-cpp/botan.git
+RUN cd botan && python3 configure.py && make && make check && make install
+
 RUN git clone https://github.com/Ishiko-cpp/pugixml.git
+
+RUN git clone https://github.com/Ishiko-Cpp/Platform.git
 
 RUN git clone https://github.com/Ishiko-Cpp/Errors.git
 RUN cd Errors/Makefiles/GNUmakefile && make
 
 RUN git clone https://github.com/Ishiko-Cpp/Types.git
 RUN cd Types/Makefiles/GNUmakefile && make
+
+RUN git clone https://github.com/Ishiko-Cpp/Text.git
+RUN cd Text/Makefiles/GNUmakefile && make
 
 RUN git clone https://github.com/Ishiko-Cpp/Process.git
 RUN cd Process/Makefiles/GNUmakefile && make
