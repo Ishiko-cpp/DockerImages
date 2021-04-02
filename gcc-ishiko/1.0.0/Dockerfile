@@ -31,4 +31,7 @@ RUN cd Terminal/Makefiles/GNUmakefile && make
 RUN git clone https://github.com/Ishiko-Cpp/Tasks.git
 RUN cd Tasks/Makefiles/GNUmakefile && make
 
+RUN git clone https://github.com/Ishiko-Cpp/UUIDs.git
+RUN cd UUIDs/Makefiles/GNUmakefile && make
+
 WORKDIR /
