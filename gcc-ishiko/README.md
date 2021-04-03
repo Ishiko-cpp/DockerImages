@@ -15,7 +15,7 @@ The images are based on the [the official GCC Docker image](https://hub.docker.c
 # Upload Instructions
 
 ```
-docker build .
+docker build --no-cache .
 docker tag <id> ishikocpp/gcc-ishiko:latest
 docker tag <id> ishikocpp/gcc-ishiko:<version>
 docker login
