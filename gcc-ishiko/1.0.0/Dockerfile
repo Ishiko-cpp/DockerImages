@@ -1,38 +1,41 @@
 FROM ishikocpp/gcc-boost:10.1.0-1.73.0
 
-WORKDIR Ishiko-cpp
+WORKDIR ishiko/cpp
 
-ENV PUGIXML=/Ishiko-cpp/pugixml
-ENV ISHIKO_CPP=/Ishiko-cpp
+ENV PUGIXML=/ishiko/cpp/pugixml
+ENV ISHIKO_CPP=/ishiko/cpp
 
-RUN git clone https://github.com/Ishiko-cpp/botan.git
+RUN git clone https://github.com/ishiko-cpp/botan.git
 RUN cd botan && python3 configure.py && make && make check && make install
 
-RUN git clone https://github.com/Ishiko-cpp/pugixml.git
+RUN git clone https://github.com/ishiko-cpp/pugixml.git
 
-RUN git clone https://github.com/Ishiko-Cpp/Platform.git
-RUN cd Platform/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/platform.git
+RUN cd platform/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/Errors.git
-RUN cd Errors/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/errors.git
+RUN cd errors/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/Types.git
-RUN cd Types/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/types.git
+RUN cd types/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/Text.git
-RUN cd Text/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/collections.git
+RUN cd collections/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/Process.git
-RUN cd Process/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/text.git
+RUN cd text/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/TestFramework.git
-RUN cd TestFramework/Core/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/process.git
+RUN cd process/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/Collections.git
-RUN cd Collections/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/filesystem.git
+RUN cd filesystem/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/FileSystem.git
-RUN cd FileSystem/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/diff.git
+RUN cd diff/build/gnumake && make
+
+RUN git clone https://github.com/ishiko-cpp/tests.git
+RUN cd tests/core/build/gnumake && make
 
 RUN git clone https://github.com/Ishiko-Cpp/Terminal.git
 RUN cd Terminal/Makefiles/GNUmakefile && make
