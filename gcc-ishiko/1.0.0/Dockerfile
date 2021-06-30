@@ -37,13 +37,13 @@ RUN cd diff/build/gnumake && make
 RUN git clone https://github.com/ishiko-cpp/tests.git
 RUN cd tests/core/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/Terminal.git
-RUN cd Terminal/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/terminal.git
+RUN cd terminal/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/Tasks.git
-RUN cd Tasks/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/tasks.git
+RUN cd tasks/build/gnumake && make
 
-RUN git clone https://github.com/Ishiko-Cpp/UUIDs.git
-RUN cd UUIDs/Makefiles/GNUmakefile && make
+RUN git clone https://github.com/ishiko-cpp/uuids.git
+RUN cd uuids/build/gnumake && make
 
 WORKDIR /
