@@ -3,7 +3,7 @@ FROM gcc:10.1.0 as build
 RUN apt-get update
 RUN apt-get -y install python-dev
 
-RUN wget https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.bz2
+RUN wget https://boostorg.jfrog.io/artifactory/main/release/1.73.0/source/boost_1_73_0.tar.bz2
 RUN tar xjf boost_1_73_0.tar.bz2
 
 WORKDIR boost_1_73_0
