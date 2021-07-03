@@ -2,8 +2,8 @@ FROM ishiko/gcc-boost:11.1.0-1.76.0
 
 WORKDIR ishiko/cpp
 
-ENV PUGIXML=/ishiko/cpp/pugixml
 ENV ISHIKO_CPP=/ishiko/cpp
+ENV ISHIKO_CPP_THIRD_PARTY_PUGIXML=/ishiko/cpp/pugixml
 
 RUN git clone https://github.com/ishiko-cpp/botan.git
 RUN cd botan && python3 configure.py && make && make check && make install
