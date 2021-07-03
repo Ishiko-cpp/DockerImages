@@ -4,7 +4,7 @@ Configuration files for [Docker](https://www.docker.com/) images that contain [G
 the Ishiko/C++ framework. As the Ishiko/C++ framework relies heavily on Boost the Boost libraries are also
 part of the images.
 
-The images are available from [Docker Hub](https://hub.docker.com/r/ishikocpp/gcc-ishiko).
+The images are available from [Docker Hub](https://hub.docker.com/r/ishiko/gcc-ishiko-cpp).
 
 # Image Contents
 
@@ -16,9 +16,9 @@ The images are based on the [the official GCC Docker image](https://hub.docker.c
 
 ```
 docker build --no-cache .
-docker tag <id> ishikocpp/gcc-ishiko:latest
-docker tag <id> ishikocpp/gcc-ishiko:<version>
+docker tag <id> ishiko/gcc-ishiko-cpp:latest
+docker tag <id> ishiko/gcc-ishiko-cpp:<version>
 docker login
-docker push ishikocpp/gcc-ishiko:latest
-docker push ishikocpp/gcc-ishiko:<version>
+docker push ishiko/gcc-ishiko-cpp:latest
+docker push ishiko/gcc-ishiko-cpp:<version>
 ```
