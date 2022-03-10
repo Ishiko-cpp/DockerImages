@@ -19,6 +19,8 @@ ENV ISHIKO_CPP_THIRD_PARTY_BOTAN=/ishiko/cpp/randombit/botan
 RUN git clone https://github.com/ishiko-cpp/randombit_botan.git botan
 RUN cd botan && git checkout 2.17.3 && python3 configure.py --prefix=${ISHIKO_CPP_THIRD_PARTY_BOTAN=/ishiko/cpp/randombit/botan} --disable-shared-library && make && make check && make install
 
+WORKDIR /ishiko/cpp
+
 RUN git clone https://github.com/ishiko-cpp/pugixml.git
 
 WORKDIR /ishiko/cpp/no1msd
